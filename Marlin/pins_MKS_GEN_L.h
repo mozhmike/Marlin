@@ -37,3 +37,8 @@
 #define MOSFET_D_PIN 7
 
 #include "pins_RAMPS.h"
+
+#define X_CS_PIN 49
+#define Y_CS_PIN 53
+
+// #define SERVO0_PIN 11

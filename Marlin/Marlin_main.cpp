@@ -11675,6 +11675,7 @@ void process_parsed_command() {
 
       case 28: // G28: Home all axes, one at a time
         gcode_G28(false);
+        //set_bed_leveling_enabled(true);
         break;
 
       #if HAS_LEVELING
