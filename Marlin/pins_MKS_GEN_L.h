@@ -34,19 +34,18 @@
 // Heaters / Fans
 //
 // Power outputs EFBF or EFBE
+
+#include "pins_RAMPS.h"
+
 #define MOSFET_D_PIN 7
 
+#define FAN_PIN        9
 //
 // CS Pins wired to avoid conflict with the LCD
 // See https://www.thingiverse.com/asset:66604
 //
 
-#ifndef X_CS_PIN
-  #define X_CS_PIN 59
-#endif
+#define X_CS_PIN 49
+#define Y_CS_PIN 53
 
-#ifndef Y_CS_PIN
-  #define Y_CS_PIN 63
-#endif
 
-#include "pins_RAMPS.h"
