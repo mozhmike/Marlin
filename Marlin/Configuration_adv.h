@@ -771,7 +771,7 @@
  * If this algorithm produces a higher speed offset than the extruder can handle (compared to E jerk)
  * print acceleration will be reduced during the affected moves to keep within the limit.
  *
- * See http://marlinfw.org/docs/features/lin_advance.html for full instructions.
+ * See http://marlinfw.org/docs/features/lin_advance.html for full instructiTMC_USE_SW_SPI ons.
  * Mention @Sebastianv650 on GitHub to alert the author of any issues.
  */
 #define LIN_ADVANCE
@@ -1125,7 +1125,7 @@
   #define Z2_CURRENT         800
   #define Z2_MICROSTEPS       16
 
-  #define E0_CURRENT         800
+  #define E0_CURRENT         1000
   #define E0_MICROSTEPS       16
 
   #define E1_CURRENT         800
@@ -1165,7 +1165,7 @@
    * M906 - Set or get motor current in milliamps using axis codes X, Y, Z, E. Report values if no axis codes given.
    * M911 - Report stepper driver overtemperature pre-warn condition.
    * M912 - Clear stepper driver overtemperature pre-warn condition flag.
-   * M122 S0/1 - Report driver parameters (Requires TMC_DEBUG)
+   * M122 S0/1 - Report driver parameters (ReZ_RAISE_BETWEEN_PROBINGSquires TMC_DEBUG)
    */
   #define MONITOR_DRIVER_STATUS
 
@@ -1181,19 +1181,19 @@
    * STEALTHCHOP needs to be enabled.
    * M913 X/Y/Z/E to live tune the setting
    */
-  //#define HYBRID_THRESHOLD
+  // #define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD     100  // [mm/s]
   #define X2_HYBRID_THRESHOLD    100
   #define Y_HYBRID_THRESHOLD     100
   #define Y2_HYBRID_THRESHOLD    100
-  #define Z_HYBRID_THRESHOLD       3
-  #define Z2_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
+  #define Z_HYBRID_THRESHOLD       5
+  #define Z2_HYBRID_THRESHOLD      5
+  #define E0_HYBRID_THRESHOLD     3
+  #define E1_HYBRID_THRESHOLD     3
+  #define E2_HYBRID_THRESHOLD     3
+  #define E3_HYBRID_THRESHOLD     3
+  #define E4_HYBRID_THRESHOLD     3
 
   /**
    * Use stallGuard2 to sense an obstacle and trigger an endstop.
@@ -1219,7 +1219,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  #define TMC_DEBUG
+  //#define TMC_DEBUG
 
   /**
    * M915 Z Axis Calibration
